@@ -3,34 +3,34 @@ const Questions = require("../lib/questions.js");
 
 jest.mock('inquirer');
 
-describe('Questions', () => {
-   describe('User Choices (this was an earlier test, no longer used)', () => {
-        it('make sure the logo is 3 characters long', async () => {
-            const questions = new Questions();
-            expect.assertions(1);
-            let logoText = 'abc';
-            let textColor = 'white';
-            let shape = 'circle';
-            let shapeColor = 'blue';
-            inquirer.prompt = jest.fn().mockResolvedValue({
-                logoText: logoText,
-                textColor: textColor,
-                shape: shape,
-                shapeColor: shapeColor,
-            });
-            let length = logoText.length <= 3;
+// describe('Questions', () => {
+//    describe('User Choices (this was an earlier test, no longer used)', () => {
+//         it('make sure the logo is 3 characters long', async () => {
+//             const questions = new Questions();
+//             expect.assertions(1);
+//             let logoText = 'abc';
+//             let textColor = 'white';
+//             let shape = 'circle';
+//             let shapeColor = 'blue';
+//             inquirer.prompt = jest.fn().mockResolvedValue({
+//                 logoText: logoText,
+//                 textColor: textColor,
+//                 shape: shape,
+//                 shapeColor: shapeColor,
+//             });
+//             let length = logoText.length <= 3;
 
-            await 
-            expect(questions.inquirerQuestions()).resolves.toEqual({
-                logoText: logoText,
-                textColor: textColor,
-                shape: shape,
-                shapeColor: shapeColor,
-            });
-            expect(length).toBe(true);
-        });
-    });
-});
+//             await 
+//             expect(questions.inquirerQuestions()).resolves.toEqual({
+//                 logoText: logoText,
+//                 textColor: textColor,
+//                 shape: shape,
+//                 shapeColor: shapeColor,
+//             });
+//             expect(length).toBe(true);
+//         });
+//     });
+// });
 
 describe('Questions', () => {
     describe('getCircleSVG()', () => {
@@ -56,3 +56,25 @@ describe('Questions', () => {
     });
 });
 
+describe('Questions', () => {
+    describe('getCircleSVG()', () => {
+        it('should return an error when leaves a color blank', async () => {
+            const questions = new Questions();
+            questions.shapeColor = '';
+        
+            jest.spyOn(inquirer, 'prompt').mockResolvedValue({
+                logoText: 'abc',
+                textColor: 'white',
+                shape: 'circle',
+                shapeColor: 'blue',
+            });
+
+            let shapeColorTest = await questions.inquirerQuestions();
+            if(shapeColorTest == '')
+            {
+                shapeColorTest = true;
+            }
+            expect(shapeColorTest).toBe(false);
+        });
+    });
+});
