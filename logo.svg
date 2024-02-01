@@ -1,4 +1,4 @@
 <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="300,0 0,0 150,200" fill="red" />
-                <text x="40%" y="40%" font-size="50px" fill="blue">asd</text>
-            </svg>
+        <circle cx="100" cy="100" r="100" fill="blue"/>
+        <text x="25%" y="55%" font-size="50px" fill="white">abc</text>
+        </svg>
