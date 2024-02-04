@@ -4,9 +4,12 @@
   
   ## Description
   
+  [A video Demo](https://drive.google.com/file/d/16rA0znSXklliRAgajAgngvlCSvocoE9H/view)
   
   After entering a couple prompts, (Logo text, shape, text & shape color) then a 300x200 .svg logo will be created with the requested criteria
   
+![Demo](./readme-assets/demo.gif)
+
   ## Table of Contents
   
   - [Installation](#installation)
