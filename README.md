@@ -4,6 +4,7 @@
   
   ## Description
   
+  
   After entering a couple prompts, (Logo text, shape, text & shape color) then a 300x200 .svg logo will be created with the requested criteria
   
   ## Table of Contents
@@ -25,7 +26,7 @@
 
   ## Usage
   
-  Used to create a .svg logo
+  Used to quickly create a logo using .svg
   
   ## Credits
   
