@@ -1,10 +1,10 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  # Quick Logo Generator 
+  # A Quick Logo Creator 
   
   ## Description
   
-  [A video Demo](https://drive.google.com/file/d/16rA0znSXklliRAgajAgngvlCSvocoE9H/view)
+  [A video Demo](https://drive.google.com/file/d/1-ArY-gX28O0PsPr68cjeCLm_dwgFws_7/view)
   
   After entering a couple prompts, (Logo text, shape, text & shape color) then a 300x200 .svg logo will be created with the requested criteria
   
